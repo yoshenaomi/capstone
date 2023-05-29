@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">capstone</string>
+    <string name="halo">Hello, </string>
+    <string name="quotes">You just need to drink coffee for good mood</string>
+    <string name="getToKnowIt">Get To Know About Coffee</string>
+    <string name="detailCoffeDash">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco laboris nisi ut aliquip
+ex ea commodo consequat.</string>
+    <string name="tittleNews">NEWS</string>
+    <string name="detailBerita">Detail News</string>
+    <string name="detailDetection">Detail Detection</string>
+    <string name="jenisBijiKopi">Jenis Biji Kopi</string>
+    <string name="kualitasBijiKopi">Kualitas Biji Kopi</string>
+    <string name="detailSingkat">Detail Singkat</string>
+    <string name="title_activity_bottom_navbar">bottomNavbar</string>
+    <string name="title_home">Dashboard</string>
+    <string name="title_quiz">Quiz</string>
+    <string name="title_detect">Detection</string>
+    <string name="title_news">News</string>
+    <string name="title_profile">Profile</string>
+</resources>
