@@ -21,4 +21,21 @@ ex ea commodo consequat.</string>
     <string name="title_detect">Detection</string>
     <string name="title_news">News</string>
     <string name="title_profile">Profile</string>
+    <string name="logo">logo</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet \n, consectetur adipiscing elit, sed do</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="input_your_email">input your email</string>
+    <string name="input_your_password">input your password</string>
+    <string name="input_your_username">input your username</string>
+    <string name="your_profile">Your Profile</string>
+    <string name="this_avatar_profile">this avatar profile</string>
+    <string name="icon_edit">icon edit</string>
+    <string name="username">Username</string>
+    <string name="sample_email">ahmad9897@gmail.com</string>
+    <string name="colon">:</string>
+    <string name="update">Update</string>
 </resources>
