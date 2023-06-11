@@ -38,4 +38,11 @@ ex ea commodo consequat.</string>
     <string name="sample_email">ahmad9897@gmail.com</string>
     <string name="colon">:</string>
     <string name="update">Update</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="invalid_password">Password must be longer than 8 characters</string>
+    <string name="email_empty">Email tidak boleh kosong</string>
+    <string name="password_empty">Password tidak boleh kosong</string>
+    <string name="username_empty">Username Tidak boleh kosong</string>
+    <string name="api_bad_req">Bad Request</string>
+    <string name="api_created">Success Created</string>
 </resources>
