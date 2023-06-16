@@ -1,4 +1,4 @@
-# About Click
+# Machine Learning Model
 Bangkit Academy 2023 led by Google, GoTo, and Traveloka - Capstone Project
 
 Based on data from the United States Department of Agriculture (USDA) in 2020, Indonesia is the third largest coffee producer in the world. Indonesia's coffee export value reached its peak in 2012 at $1.2 billion. Since then, coffee exports have shown a decreasing trend until 2020.
@@ -21,3 +21,6 @@ Within the application, there is valuable information related to coffee beans th
 We sincerely hope that this application will bring many benefits to everyone, particularly coffee farmers.
 
 ~Warm regards from the Click team.
+
+##Dataset
+https://bit.ly/dataset-usk-coffee
