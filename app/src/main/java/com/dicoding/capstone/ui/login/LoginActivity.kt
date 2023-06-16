@@ -13,7 +13,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
-import com.dicoding.capstone.MainActivity
+import com.dicoding.capstone.ui.bottomnav.BottomNavbarActivity
 import com.dicoding.capstone.R
 import com.dicoding.capstone.data.local.PrefDataStore
 import com.dicoding.capstone.data.local.dataStore
@@ -56,6 +56,7 @@ class LoginActivity : AppCompatActivity() {
                     password.isEmpty() -> {
                         passwordLoginEditText.error = getString(R.string.password_empty)
                     }
+
                     else -> {
                         loginViewModel.login(email, password)
                     }
@@ -73,8 +74,8 @@ class LoginActivity : AppCompatActivity() {
 
 
 
-        loginViewModel.let {viewModel ->
-            viewModel.loginResult.observe(this){login ->
+        loginViewModel.let { viewModel ->
+            viewModel.loginResult.observe(this) { login ->
                 viewModel.saveUser(
                     login.result.userID,
                     login.result.email,
@@ -84,20 +85,20 @@ class LoginActivity : AppCompatActivity() {
             }
 
 
-            viewModel.responseMessage.observe(this){response ->
-                if(response == "400"){
+            viewModel.responseMessage.observe(this) { response ->
+                if (response == "400") {
                     Toast.makeText(this, getString(R.string.api_bad_req), Toast.LENGTH_SHORT).show()
-                } else if(response == "created"){
+                } else if (response == "created") {
                     Toast.makeText(this, getString(R.string.api_created), Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    val intent = Intent(this@LoginActivity, BottomNavbarActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
                     finish()
                 }
             }
-            viewModel.isLoading.observe(this){isLoading ->
-                binding.progressBar.visibility = if(isLoading) View.VISIBLE else View.GONE
+            viewModel.isLoading.observe(this) { isLoading ->
+                binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
             }
         }
     }

@@ -13,3 +13,7 @@ data class RegisBody(
     @SerializedName("email") val email :String,
     @SerializedName("password") val password :String
 )
+
+data class Dashboard(
+    @SerializedName("username") val username: String
+)

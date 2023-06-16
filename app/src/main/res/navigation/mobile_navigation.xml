@@ -17,9 +17,9 @@
         android:label="@string/title_quiz"
         tools:layout="@layout/fragment_quiz" />
 
-    <fragment
+    <activity
         android:id="@+id/navigation_detection"
-        android:name="com.dicoding.capstone.ui.detection.DetectionFragment"
+        android:name="com.dicoding.capstone.ui.detection.DetectionActivity"
         android:label="@string/title_detect"
         tools:layout="@layout/fragment_detection" />
 

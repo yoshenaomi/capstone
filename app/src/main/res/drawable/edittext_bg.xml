@@ -4,5 +4,7 @@
     <stroke
         android:width="1dp"
         android:color="#7A7878" />
-    <corners android:radius="10dp" /> <!-- Radius sudut -->
+    <corners
+        android:radius="10dp"
+        /> <!-- Radius sudut -->
 </shape>
