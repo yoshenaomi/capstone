@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,27 +11,22 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Capstone"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity android:name=".ui.detection.DetectionActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ui.home.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.register.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".ui.login.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".bottomNavbar"
-            android:exported="false"
-            android:label="@string/title_activity_bottom_navbar" />
-        <activity
-            android:name=".detailDetection"
-            android:exported="false" />
-        <activity
-            android:name=".detailNews"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,6 +34,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.bottomnav.BottomNavbarActivity"
+            android:exported="false"
+            android:label="@string/title_activity_bottom_navbar" />
+        <activity
+            android:name=".DetailDetectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".detailNews"
+            android:exported="false" />
     </application>
 
 </manifest>

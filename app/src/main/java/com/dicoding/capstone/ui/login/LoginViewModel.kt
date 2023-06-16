@@ -1,5 +1,7 @@
 package com.dicoding.capstone.ui.login
 
+import android.content.Context
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -60,8 +62,10 @@ class LoginViewModel(private val pref: PrefDataStore) : ViewModel() {
             }
 
             override fun onFailure(call: Call<LoginModel>, t: Throwable) {
+
                 _isLoading.value = true
-                Toast.makeText(null, "Error : ", Toast.LENGTH_SHORT).show()
+                Log.e(tag,"OnFailure : ${t.message}")
+                responseMessage.postValue(t.message)
             }
 
         })

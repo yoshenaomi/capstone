@@ -1,141 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation_home"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:clipToOutline="true"
-    android:background="@drawable/dashboard_page"
-    tools:context=".ui.home.HomeFragment" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboard_page">
 
-    <RelativeLayout
-        android:id="@+id/profile"
-        android:layout_width="414dp"
-        android:layout_height="120dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/profile"
-        android:clipToOutline="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="ScrollViewSize">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/top_banner_user"
+            android:elevation="5dp"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/helloTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="top"
+                android:text="@string/halo"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/guidelineVertical1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/quotes"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/guidelineVertical1"
+                app:layout_constraintTop_toBottomOf="@id/helloTextView" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:elevation="3dp"
+                android:src="@drawable/fotoku"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guidelineVertical2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVertical2"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_percent="0.52"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVertical1"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_percent="0.0729927"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:layout_width="98dp"
-            android:layout_height="23dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="27dp"
-            android:layout_marginTop="29dp"
-            android:gravity="top"
-            android:text="@string/halo"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:id="@+id/tittleDetailCoffeeDashboardTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/coffee_kintamani"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile" />
 
         <TextView
-            android:layout_width="300dp"
-            android:layout_height="23dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="27dp"
-            android:layout_marginTop="60dp"
-            android:gravity="top"
+            android:id="@+id/detailCoffeeDashboardTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:justificationMode="inter_word"
+            android:lineSpacingExtra="8dp"
+            android:text="@string/detailCoffeeDash"
+            android:textColor="@color/black"
             android:textSize="14sp"
-            android:text="@string/quotes"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tittleDetailCoffeeDashboardTextView" />
 
         <TextView
-            android:id="@+id/tv_username"
-            android:layout_width="98dp"
-            android:layout_height="23dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="87dp"
-            android:layout_marginTop="29dp"
-            android:gravity="top"
-            android:textSize="20sp"
-            tools:text="username" />
+            android:id="@+id/titleNewsDashboardTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/berita_coffee"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailCoffeeDashboardTextView" />
 
-        <ImageView
-            android:id="@+id/btn_logout"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="382dp"
-            android:layout_marginTop="9dp"
-            android:src="@drawable/ic_logout" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/newsDashboardRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleNewsDashboardTextView"
+            app:layout_constraintBottom_toTopOf="@id/view"
+            />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_user"
-            android:layout_width="40dp"
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginStart="320dp"
-            android:layout_marginTop="29dp"
-            tools:src="@tools:sample/avatars" />
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </RelativeLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_getToKnow"
-        android:layout_marginTop="16dp"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/profile"
-        app:layout_constraintStart_toStartOf="@+id/profile"
-        app:layout_constraintTop_toBottomOf="@+id/profile"
-        android:text="@string/getToKnowIt"/>
-
-    <TextView
-        android:id="@+id/detailCoffee"
-        android:layout_width="392dp"
-        android:layout_height="98dp"
-        android:text="@string/detailCoffeDash"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_getToKnow" />
-
-    <RelativeLayout
-        android:id="@+id/berita"
-        android:layout_width="411dp"
-        android:layout_height="162dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:clipToOutline="true"
-        app:layout_constraintTop_toBottomOf="@+id/detailCoffee"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:layout_width="329dp"
-            android:layout_height="128dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="47dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginBottom="35dp"
-            tools:layout_editor_absoluteX="48dp"
-            tools:layout_editor_absoluteY="48dp" />
-
-        <TextView
-            android:id="@+id/tv_newsTittle"
-            android:layout_width="300dp"
-            android:layout_height="20dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="130dp"
-            android:layout_marginEnd="94dp"
-            tools:text="Judul Berita Adalah Apa?"
-            android:textStyle="bold"
-            android:textSize="14sp"/>
-    </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 

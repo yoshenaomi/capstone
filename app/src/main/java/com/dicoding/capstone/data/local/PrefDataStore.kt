@@ -9,6 +9,7 @@ import androidx.datastore.preferences.preferencesDataStore
 import com.dicoding.capstone.model.Result
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import kotlin.properties.ReadOnlyProperty
 
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore("User")
 

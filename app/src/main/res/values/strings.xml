@@ -1,14 +1,9 @@
 <resources>
-    <string name="app_name">capstone</string>
-    <string name="halo">Hello, </string>
-    <string name="quotes">You just need to drink coffee for good mood</string>
+    <string name="app_name">CLICK</string>
+    <string name="halo">Welcome, to Click </string>
+    <string name="quotes">With each sip, the story \nof coffee beans unfolds \non our taste buds.</string>
     <string name="getToKnowIt">Get To Know About Coffee</string>
-    <string name="detailCoffeDash">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-sed do eiusmod tempor incididunt ut labore et dolore
-magna aliqua. Ut enim ad minim veniam, quis nostrud
-exercitation ullamco laboris nisi ut aliquip
-ex ea commodo consequat.</string>
+    <string name="detailCoffeeDash"> Coffee beans are small, flavorful seeds that come from the coffee plant. When roasted and brewed, they offer a rich and aromatic experience, providing a delightful range of flavors and energizing effects. Enjoyed worldwide, coffee beans have become an essential part of daily routines, bringing people together through shared moments of enjoyment and stimulation.</string>
     <string name="tittleNews">NEWS</string>
     <string name="detailBerita">Detail News</string>
     <string name="detailDetection">Detail Detection</string>
@@ -45,4 +40,36 @@ ex ea commodo consequat.</string>
     <string name="username_empty">Username Tidak boleh kosong</string>
     <string name="api_bad_req">Bad Request</string>
     <string name="api_created">Success Created</string>
+    <string name="this_is_news">this is News</string>
+    <string name="avatar_user">avatar user</string>
+    <string name="logout">LogOut</string>
+    <string name="coffee_kintamani">Coffee Kintamani</string>
+    <string name="berita_coffee">Berita Coffee</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pictures">Foto</string>
+    <string name="detect">Detect</string>
+    <string name="imagenews">ImageNews</string>
+    <string name="contoh_news">Contoh News</string>
+    <string name="desc">Desc</string>
+    <string name="welcome_login">Even the smallest coffee bean can create the most invigorating aroma</string>
+    <string name="welcome_regis">Roasted to perfection, coffee beans unleash their aromatic symphony.</string>
+    <string name="onproggress">OnProggress</string>
+    <string name="log_out">Logout</string>
+
+    <string-array name="data_name">
+        <item>Kintamani</item>
+        <item>NTT</item>
+    </string-array>
+
+    <string-array name="data_photo">
+        <item>@drawable/kopi</item>
+        <item>@drawable/kopi</item>
+    </string-array>
+
+    <string-array name="data_desc">
+        <item>kintamani bali</item>
+        <item>Ntt</item>
+    </string-array>
+
 </resources>
