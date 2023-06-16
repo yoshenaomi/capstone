@@ -62,19 +62,15 @@ const login = async (req, res) => {
 };
 
 //function cekdata
-const cekData = async (req, res) => {                         
-  const query = 'SELECT id, username, password, images, email FROM users';    
-  
-  db.query(query, (error, results) => {                                      
-    if (error) {  
+const cekData = async (req, res) => {    
+  const query = 'SELECT id, username, password, images, email FROM users';       
+
+  db.query(query, (error, results) => { 
+    if (error) {
       console.error('Kesalahan menjalankan kueri:', error);
       res.status(500).json({ error: 'Kesalahan Server Internal' });
-    } else {     
-      res.status(200).json({                                   
-        result: ({
-          data: rows
-        })                                  
-      });  
+    } else {
+      res.status(200).json(results);
     }
   });
 };
@@ -124,7 +120,8 @@ const profil = async (req, res) => {
           return res.status(200).json({
             username: rows[0].username,
             email: rows[0].email,
-            password: rows[0].password
+            password: rows[0].password,
+            images: rows[0].images
           });
         } else {
           res.status(404).json({ error: 'Profil pengguna tidak ditemukan' });
